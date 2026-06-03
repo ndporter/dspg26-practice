@@ -1,0 +1,59 @@
+---
+title: "Quarto-practice"
+author: "Nathaniel D. Porter"
+format: html
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a
+finished document. To learn more about Quarto see <https://quarto.org>.
+
+**Bold** or __Bold__
+*Italics* or _Italics_
+
+- Use dash, plus, or asterisk followed by a space for unordered list
+- Another list item
+
+1. Numbered/ordered lists are any number followed by a period and a space
+2. In some parsers (but not RStudio), the numbers won't matter (it will renumber based on order)
+
+[linked text](https://quarto.org)
+
+### heading 3 (nested inside heading 2)
+
+
+
+## Running Code
+
+When you click the **Render** button a document will be generated that
+includes both content and the output of embedded code. You can embed
+code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this:
+
+```{r}
+#| echo: false #more robust than putting it in the {}
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is
+displayed).
+
+## Demonstration
+
+```{r}
+library(tidyverse)
+#quarto docs use their directory as the working environment
+#here() is a better solution
+library(here)
+
+#read data
+interviews_plotting <- read_csv(here("data", "interviews_plotting.csv"))
+interviews_plotting
+```
+

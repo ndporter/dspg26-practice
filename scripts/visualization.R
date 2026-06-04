@@ -69,4 +69,4 @@ interviews_plotting |>
   labs(y='Wall Type', x=NULL, fill="Village") +
   theme_minimal()
 
-ggsave(filename = 'fig/village_walls_bar.png', height=9, width=7)
+ggsave(filename = 'fig/village_walls_bar.png', height=8, width=7)
